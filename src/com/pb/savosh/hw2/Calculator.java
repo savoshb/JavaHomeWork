@@ -7,6 +7,7 @@ public class Calculator {
         Scanner in = new Scanner(System.in);
         int operand1;
         int operand2;
+
         System.out.println("Введите первое значение:");
             operand1 = in.nextInt();
         System.out.println("Введите второе значение:");
@@ -30,6 +31,9 @@ public class Calculator {
             break;
         case "*":
             System.out.println(operand1*operand2);
+            break;
+        default:
+            System.out.println("Неверный знак");
     }
     }
 }
