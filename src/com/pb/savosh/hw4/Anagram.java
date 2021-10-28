@@ -12,8 +12,8 @@ public class Anagram {
         str1 = scan.nextLine();
         System.out.println("Введите второе предложение:");
         str2 = scan.nextLine();
-        String new1 = str1.replaceAll("\\s","");
-        String new2 = str2.replaceAll("\\s","");
+        String new1 = str1.replaceAll("\\p{Punct}|\\s","");
+        String new2 = str2.replaceAll("\\p{Punct}|\\s","");
 
         comparison(new1, new2);
     }
