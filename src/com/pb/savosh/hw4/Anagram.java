@@ -12,19 +12,25 @@ public class Anagram {
         str1 = scan.nextLine();
         System.out.println("Введите второе предложение:");
         str2 = scan.nextLine();
-        comparison(str1, str2);
+        String new1 = str1.replaceAll("\\s","");
+        String new2 = str2.replaceAll("\\s","");
+
+        comparison(new1, new2);
     }
 
-    public static void comparison(String str1, String str2) {
-        char[] mass1 = str1.toCharArray();
-        char[] mass2 = str2.toCharArray();
+    public static void comparison(String new1, String new2) {
+        char[] mass1 = new1.toCharArray();
+        char[] mass2 = new2.toCharArray();
         int i = 0;
         int j = 0;
         Arrays.sort(mass1);
         Arrays.sort(mass2);
+
+
         if (mass1[i] == mass2[j]) {
             System.out.println("Это анаграмма!");
-        } else {
+        }
+        else {
             System.out.println("Это не анаграмма!");
         }
     }
