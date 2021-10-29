@@ -26,8 +26,8 @@ public class Anagram {
         int j = 0;
         Arrays.sort(mass1);
         Arrays.sort(mass2);
-        System.out.println(mass1);
-        System.out.println(mass2);
+//        System.out.println(mass1);
+//        System.out.println(mass2);
 
         if ((mass1[i] == mass2[j]) && (mass1.length == mass2.length)) {
             System.out.println("Это анаграмма!");
