@@ -12,14 +12,16 @@ public class Anagram {
         str1 = scan.nextLine();
         System.out.println("Введите второе предложение:");
         str2 = scan.nextLine();
+
+        comparison(str1, str2);
+    }
+
+    public static void comparison(String str1, String str2) {
         String new1 = str1.replaceAll("\\p{Punct}|\\s", "");
         String new2 = str2.replaceAll("\\p{Punct}|\\s", "");
         new1 = new1.toLowerCase();
         new2 = new2.toLowerCase();
-        comparison(new1, new2);
-    }
 
-    public static void comparison(String new1, String new2) {
         char[] mass1 = new1.toCharArray();
         char[] mass2 = new2.toCharArray();
         int i = 0;
