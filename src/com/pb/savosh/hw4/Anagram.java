@@ -14,7 +14,8 @@ public class Anagram {
         str2 = scan.nextLine();
         String new1 = str1.replaceAll("\\p{Punct}|\\s","");
         String new2 = str2.replaceAll("\\p{Punct}|\\s","");
-
+new1 = new1.toLowerCase();
+new2 = new2.toLowerCase();
         comparison(new1, new2);
     }
 
@@ -25,7 +26,8 @@ public class Anagram {
         int j = 0;
         Arrays.sort(mass1);
         Arrays.sort(mass2);
-
+//        System.out.println(mass1);
+//        System.out.println(mass2);
 
         if (mass1[i] == mass2[j]) {
             System.out.println("Это анаграмма!");
