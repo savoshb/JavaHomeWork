@@ -31,9 +31,7 @@ public class Anagram {
 
         if ((mass1[i] == mass2[j]) && (mass1.length == mass2.length)) {
             System.out.println("Это анаграмма!");
-        }
-
-        else {
+        } else {
             System.out.println("Это не анаграмма!");
         }
     }
