@@ -12,10 +12,10 @@ public class Anagram {
         str1 = scan.nextLine();
         System.out.println("Введите второе предложение:");
         str2 = scan.nextLine();
-        String new1 = str1.replaceAll("\\p{Punct}|\\s","");
-        String new2 = str2.replaceAll("\\p{Punct}|\\s","");
-new1 = new1.toLowerCase();
-new2 = new2.toLowerCase();
+        String new1 = str1.replaceAll("\\p{Punct}|\\s", "");
+        String new2 = str2.replaceAll("\\p{Punct}|\\s", "");
+        new1 = new1.toLowerCase();
+        new2 = new2.toLowerCase();
         comparison(new1, new2);
     }
 
@@ -26,12 +26,13 @@ new2 = new2.toLowerCase();
         int j = 0;
         Arrays.sort(mass1);
         Arrays.sort(mass2);
-//        System.out.println(mass1);
-//        System.out.println(mass2);
+        System.out.println(mass1);
+        System.out.println(mass2);
 
-        if (mass1[i] == mass2[j]) {
+        if ((mass1[i] == mass2[j]) && (mass1.length == mass2.length)) {
             System.out.println("Это анаграмма!");
         }
+
         else {
             System.out.println("Это не анаграмма!");
         }

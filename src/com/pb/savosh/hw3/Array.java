@@ -18,9 +18,7 @@ public class Array {
             array[i] = scan.nextInt();
         }
         System.out.println("Массив:");
-        for (int j : array) {
-            System.out.println(j);
-        }
+        System.out.println(Arrays.toString(array));
         for (int j : array) {
             sum += j;
         }
