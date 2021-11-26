@@ -14,7 +14,7 @@ public class Main {
             System.out.println("Элемент массива под выбранным индексом: " + float1.floatValue());
 
             Number float2 = numBox.length();
-            System.out.println("Текущая длина массива: " + float2.floatValue());
+            System.out.println("Текущая длина массива: " + float2);
 
             Number float3 = numBox.average();
             System.out.println("Среднее значение массива: " + float3.floatValue());
@@ -32,19 +32,19 @@ public class Main {
             num.add(new Integer[]{10, 25});
 
             Number int1 = num.get(1);
-            System.out.println("Элемент массива под выбранным индексом: " + int1.intValue());
+            System.out.println("Элемент массива под выбранным индексом: " + int1);
 
             Number int2 = num.length();
-            System.out.println("Текущая длина массива: " + int2.intValue());
+            System.out.println("Текущая длина массива: " + int2);
 
             Number int3 = num.average();
-            System.out.println("Среднее значение массива: " + int3.intValue());
+            System.out.println("Среднее значение массива: " + int3);
 
             Number int4 = num.sum();
-            System.out.println("Сумма элементов массива: " + int4.intValue());
+            System.out.println("Сумма элементов массива: " + int4);
 
             Number int5 = num.max();
-            System.out.println("Максимальное значение массива: " + int5.intValue());
+            System.out.println("Максимальное значение массива: " + int5);
 
         } catch (ArrayIndexOutOfBoundsException ex) {
             System.out.println(ex.getMessage());

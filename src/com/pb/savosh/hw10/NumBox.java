@@ -33,7 +33,7 @@ public class NumBox<T extends Number> {
     }
 
     public double sum() {
-        double sum = 0;
+        float sum = 0;
         for (T i : numbers) {
             sum += i.doubleValue();
         }
