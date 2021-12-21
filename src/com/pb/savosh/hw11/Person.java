@@ -82,6 +82,7 @@ public class Person implements Comparable<Person> {
                 ", время редактирования: '" + time + '\'';
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
