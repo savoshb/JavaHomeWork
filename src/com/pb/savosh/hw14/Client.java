@@ -1,6 +1,7 @@
 package com.pb.savosh.hw14;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
@@ -8,7 +9,7 @@ import java.net.Socket;
 public class Client {
     public static void main(String[] args) throws Exception {
         String host = "localhost";
-        int portNumber = 1234;
+        int portNumber = 1777;
         System.out.println("Клиент запущен.");
         System.out.println("Подключение к " + host + ":" + portNumber);
 
@@ -23,13 +24,12 @@ public class Client {
             outServer.println(dataFromUser);
             dataFromServer = inServer.readLine();
             System.out.println(dataFromServer);
-            if (dataFromUser.equalsIgnoreCase("bye")) {
+            if ("bye".equalsIgnoreCase(dataFromUser)) {
+                outServer.close();
+                inServer.close();
+                socket.close();
                 break;
             }
         }
-        outServer.close();
-        inServer.close();
-        outServer.close();
-        socket.close();
     }
 }

@@ -27,6 +27,9 @@ public class Server {
                 System.out.println("В ожидании сообщений...");
                 while ((clMessage = in.readLine()) != null) {
                     if (clMessage.equalsIgnoreCase("bye")) {
+                        in.close();
+                        out.close();
+                        socket.close();
                         break;
                     }
                     out.println(LocalDateTime.now() + " " + clMessage);
@@ -39,7 +42,7 @@ public class Server {
     }
 
     public static void main(String[] args) throws Exception {
-        int portNumber = 1234;
+        int portNumber = 1777;
         ServerSocket servSocket = new ServerSocket(portNumber);
         System.out.println("Сервер запущен на порту " + portNumber);
         ExecutorService threadPool = Executors.newFixedThreadPool(10);
