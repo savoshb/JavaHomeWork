@@ -32,7 +32,7 @@ public class Server {
                         socket.close();
                         break;
                     }
-                    out.println(LocalDateTime.now());
+                    out.println(clMessage + " " + LocalDateTime.now());
                     System.out.println(clMessage);
                 }
             } catch (IOException e) {

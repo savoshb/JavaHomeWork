@@ -43,7 +43,7 @@ public class GUIController {
                 out.println(dataFromUser);
 
                 dataFromServer = in.readLine();
-                server_field.setText(clientName + ": " + dataFromUser + "\n" + dataFromServer + "\n" + server_field.getText());
+                server_field.appendText(clientName + ": " + dataFromServer + "\n");
                 clientMessageButton.clear();
 
             } catch (Exception e) {
